@@ -2,7 +2,12 @@
   "name": "restaurant-template",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "deploy": "npm run build --prod && cp ./dist/apps/dashboard/index.html ./dist/apps/dashboard/200.html && npx surge ./dist/apps/dashboard/ https://astro-tracker-application.surge.sh/",
+    "serve:api": "json-server server/db.json",
+    "serve:all": "concurrently \"json-server server/db.json\" \"ng serve\"",
+    "test": "nx test"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~15.2.0",
@@ -26,6 +31,8 @@
     "axios": "^1.0.0",
     "concurrently": "^7.6.0",
     "json-server": "^0.17.2",
+    "primeicons": "^6.0.1",
+    "primeng": "^15.2.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

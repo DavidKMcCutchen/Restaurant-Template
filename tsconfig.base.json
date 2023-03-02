@@ -16,7 +16,14 @@
     "noImplicitAny": false,
     "strictPropertyInitialization": false,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@restaurant-template/api-interfaces": [
+        "libs/api-interfaces/src/index.ts"
+      ],
+      "@restaurant-template/core-data": ["libs/core-data/src/index.ts"],
+      "@restaurant-template/core-state": ["libs/core-state/src/index.ts"],
+      "@restaurant-template/environment": ["libs/environment/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
